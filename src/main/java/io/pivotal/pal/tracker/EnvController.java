@@ -15,10 +15,10 @@ public class EnvController {
     private String cfIndex;
     private String cfAddr;
 
-    public EnvController(@Value("${port}") String port,
-                         @Value("${memory.limit}") String memoryLimit,
-                         @Value("${cf.instance.index}") String cfIndex,
-                         @Value("${cf.instance.addr}") String cfAddr){
+    public EnvController(@Value("${port:NOT SET}") String port,
+                         @Value("${memory.limit:NOT SET}") String memoryLimit,
+                         @Value("${cf.instance.index:NOT SET}") String cfIndex,
+                         @Value("${cf.instance.addr:NOT SET}") String cfAddr){
       this.port=port;
       this.memoryLimit=memoryLimit;
       this.cfIndex=cfIndex;
